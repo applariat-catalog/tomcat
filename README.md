@@ -1,16 +1,14 @@
 # Tomcat Image Builder
 
-appLariat's generic image builder for tomcat.
-
-This is the default build configuration for tomcat images and is used by the appLariat Component Builder service
+appLariat's generic image builder for tomcat. This is the default build configuration for tomcat images and is used by the appLariat Component Builder service
 
 Default build workflow:
 
-Component builder starts with a task to create a tomcat image and then dynamically retrieves this repository
+Component builder starts with a task to create a tomcat image and then dynamically retrieves this repository.
 
-Component builder updates the FROM image based on configuration information provided at startup
+Component builder updates the FROM image based on configuration information provided at startup.
 
-Component builder pulls down the specified code artifact
+Component builder pulls down the specified code artifact.
  
 The docker build command is executed via the docker api, which process the Dockerfile:
 
