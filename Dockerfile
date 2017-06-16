@@ -1,5 +1,5 @@
 FROM tomcat:latest
-ARG build_root="."
+ARG artifact_root="."
 COPY $artifact_root/build.sh /build.sh
 COPY $artifact_root/entrypoint.sh /entrypoint.sh
 COPY $artifact_root/src/ /src/
