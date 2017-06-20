@@ -3,10 +3,10 @@
 # Requirements - A valid war file exists within the code_dir
 # Copies the war file from the code_dir and copies it into /usr/local/tomcat/webapps
 
-
+#Clean up potential leftovers
 rm -rf /usr/local/tomcat/webapps/*
 
-#Check for a war file and throw error if not present
+#Check for *.war files and throw error if not present
 if ls $artifact_root/src/*.war 1> /dev/null 2>&1
 then
  echo "found a war file"
