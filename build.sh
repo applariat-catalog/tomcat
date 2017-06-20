@@ -9,6 +9,17 @@ logfile=/src/build.log
 exec > $logfile 2>&1
 set -x
 
+#make sure server.xml exists in /conf dir
+#stump the default server.xml file with the user provided config
+#optionally replace conf/server.xml with your own to customize tomcat
+if [ -e /conf/server.xml ]
+then
+ cp -f /conf/server.xml /usr/local/tomcat/conf/
+else
+ echo "ERROR! did not find server.xml file in /conf folder"
+ exit 1
+fi
+
 #Clean up potential leftovers
 rm -rf /usr/local/tomcat/webapps/*
 
