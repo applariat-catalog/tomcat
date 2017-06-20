@@ -7,10 +7,9 @@
 rm -rf /usr/local/tomcat/webapps/*
 
 #Check for *.war files and throw error if not present
-if ls $artifact_root/src/*.war 1> /dev/null 2>&1
+if ls /src/*.war 1> /dev/null 2>&1
 then
- echo "found a war file"
- cp -f $artifact_root/src/*.war /usr/local/tomcat/webapps
+ cp -f /src/*.war /usr/local/tomcat/webapps
 else
  echo "ERROR! did not find any *.war file"
  exit 1
