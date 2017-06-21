@@ -20,6 +20,7 @@ Environment:
   - CATALINA_HOME=/usr/local/tomcat
   - CATALINA_BASE=/usr/local/tomcat
   - JRE_HOME=/usr
+
 Process:
   - $CATALINA_HOME/catalina.sh run
 
