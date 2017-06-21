@@ -4,8 +4,8 @@
 # Copies the war file from the code_dir and copies it into /usr/local/tomcat/webapps
 
 
-#Log everything in /src/build.log
-logfile=/src/build.log
+#Log everything in /code/build.log
+logfile=/code/build.log
 exec > $logfile 2>&1
 set -x
 
