@@ -16,9 +16,12 @@ appLariat's generic image builder for tomcat. This is the default build configur
 5. Component builder pushes the generated image to a desiginated container repository
 
 # Tomcat Defaults
-- CATALINA_HOME=/usr/local/tomcat
-- CATALINA_BASE=/usr/local/tomcat
-- JRE_HOME=/usr
+Environment:
+  - CATALINA_HOME=/usr/local/tomcat
+  - CATALINA_BASE=/usr/local/tomcat
+  - JRE_HOME=/usr
+Process:
+  - $CATALINA_HOME/catalina.sh run
 
 Learn more about the [Tomcat Official Image](https://hub.docker.com/_/tomcat/)
 
