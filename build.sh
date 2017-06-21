@@ -1,7 +1,7 @@
 #! /bin/sh
 # appLariats generic tomcat build script
-# Requirements - A valid war file exists within the src_dir
-# Copies the war file from the src_dir and copies it into /usr/local/tomcat/webapps
+# Requirements - A valid war file exists within the code_dir
+# Copies the war file from the code_dir and copies it into /usr/local/tomcat/webapps
 
 
 #Log everything in /src/build.log
