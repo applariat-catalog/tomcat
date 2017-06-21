@@ -13,7 +13,7 @@ appLariat's generic image builder for tomcat. This is the default build configur
     - Copies the conf/ directory which includes server.xml file into image.
     - Copies the code artifact into the image
     - Executes the build.sh script to prepare the image to run.
-5. Component builder pushes the generated image to a desiginated container repository
+5. Component builder pushes the generated image to a designated container repository
 
 # Tomcat Defaults
 Environment:
