@@ -30,7 +30,7 @@ Learn more about the [Tomcat Official Image](https://hub.docker.com/_/tomcat/)
 1. If you only need customize the tomcat configuration files, the build.sh script will automatically look for a directory in the code artifact called tomcat-conf, in which case it will overwrite the default configuration files
 
 2. Clone this repository to modify and then update the build artifact in your application component configuration within appLariat to use your own customized builder.
-    - Simpliest option is to modify the build.sh and entrypoint.sh scripts to prepare and customize the image. 
+    - Simplest option is to modify the build.sh and entrypoint.sh scripts to prepare and customize the image. 
       - build.sh runs once during the docker build process. It can be used to install software packages into image.
       - entrypoint.sh runs every time that image starts and can be utilized to prepare run time environmet like exporting environment variables, setting the PATH etc.
   
