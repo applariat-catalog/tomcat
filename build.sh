@@ -5,7 +5,7 @@
 
 
 #Log everything in /code/build.log
-logfile=/code/build.log
+logfile=/tmp/build.log
 exec > $logfile 2>&1
 set -x
 
@@ -15,13 +15,7 @@ if [ -e /code/tomcat-conf/server.xml ]
 then
  cp -f /code/tomcat-conf/server.xml /usr/local/tomcat/conf/
 else
- #look inside /conf for server.xml and use it if exists
- #customizing tomcat through cloning this github repo and providing conf/server.xml
- if [ -e /conf/server.xml ]
- then
-  cp -f /conf/server.xml /usr/local/tomcat/conf/
- fi
- #if non of the above, default config file inside the image will be used
+ echo "Could not find /code/tomcat-conf/server.xml, going to use the default server.xml"
 fi
 
 #Clean up potential leftovers
@@ -35,3 +29,7 @@ else
  echo "ERROR! did not find any *.war file"
  exit 1
 fi
+
+#Cleaning up after ourselves
+rm -rf /code
+#rm -rf /conf
